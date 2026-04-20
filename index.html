@@ -40,13 +40,11 @@ header { padding: 30px 0 56px; }
   background: #000;
   box-shadow: 0 28px 88px rgba(0, 0, 0, 0.42);
 }
+.video-wrap.landscape { width: min(920px, 100%); }
 .video { position: relative; width: 100%; aspect-ratio: 9 / 16; }
+.video-wrap.landscape .video { aspect-ratio: 16 / 9; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.hero-copy { width: min(920px, 100%); margin: 0 auto; text-align: center; }
-.brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; color: var(--muted); font-size: 15px; font-weight: 800; }
-.mark { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 0 26px color-mix(in srgb, var(--accent) 46%, transparent); }
 h1 { margin: 0; font-size: clamp(35px, 6vw, 70px); line-height: 1.1; letter-spacing: 0; }
-.subtitle { margin: 18px auto 0; max-width: 840px; color: var(--muted); font-size: clamp(18px, 2vw, 22px); }
 main { padding-bottom: 64px; }
 .qa { display: grid; gap: 18px; padding: 32px 0; border-top: 1px solid var(--line); }
 .question { margin: 0; font-size: clamp(24px, 4vw, 38px); line-height: 1.22; letter-spacing: 0; }
@@ -60,6 +58,7 @@ main { padding-bottom: 64px; }
   color: #E8EDF5;
   font-size: 18px;
 }
+.section-images { margin-top: 4px; }
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -94,50 +93,48 @@ figcaption span { display: block; color: var(--muted); font-size: 13px; line-hei
 <body>
   <div class="page">
     <header>
-      <div class="video-wrap">
+      <div class="video-wrap landscape">
         <div class="video">
           <iframe src="https://www.youtube.com/embed/4iuqHjkSzzY" title="ShadowMind YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-      </div>
-      <div class="hero-copy">
-        <div class="brand"><span class="mark"></span>ShadowMind</div>
-        <h1>카드 전략으로 AI 신경망을 배우는 학습형 전략 게임</h1>
-        <p class="subtitle">카드 선택과 전투 결과를 NN 시각화로 연결해, 플레이하는 순간 AI 판단 구조가 읽히게 만듭니다.</p>
       </div>
     </header>
     <main>
 
       <section class="qa">
-        <h2 class="question">Q1. 이 아이디어를 떠올린 배경은 무엇인가요?</h2>
-        <p class="answer">AI와 신경망은 이제 누구나 알아야 할 기술이 되었지만, 초급 학습자에게는 여전히 어렵고 추상적입니다. 수식과 코드 중심의 설명은 진입장벽이 높고, 단순 게임형 콘텐츠는 재미는 있어도 왜 그런 결과가 나왔는지를 이해로 연결하기 어렵습니다. ShadowMind는 이 간극에서 출발했습니다. 플레이어가 카드 덱을 구성하고 유닛을 배치하며 전투를 진행하는 동안, 선택한 카드가 어떤 입력이 되고 신경망이 어떻게 반응하며 전투 결과가 왜 달라지는지를 한 화면에서 볼 수 있게 만드는 것이 핵심입니다. 즉 ShadowMind는 AI를 따로 설명하는 게임이 아니라, 플레이하는 순간 NN의 입력, 판단, 출력 구조가 자연스럽게 읽히는 학습형 전략 게임입니다.</p>
+        <h2 class="question">Q1. 나의 아이디어를 한 줄로 소개해주세요.</h2>
+        <p class="answer">ShadowMind는 카드 전략 전투를 통해 신경망의 입력, 판단, 출력 구조를 자연스럽게 배우는 AI 학습형 게임입니다.</p>
+
       </section>
         
 
       <section class="qa">
-        <h2 class="question">Q2. 누구의 어떤 문제를 해결하고자 하나요?</h2>
-        <p class="answer">ShadowMind의 1차 대상은 AI와 코딩을 처음 배우는 청소년, 비전공 학습자, 그리고 이를 수업에 도입하려는 교육기관과 강사입니다. 이들은 AI 학습의 필요성은 느끼지만, 신경망이 실제로 어떻게 판단하고 반응하는지 체감할 기회가 부족합니다. 기존 온라인 강의는 개념 전달에는 강하지만 몰입이 낮고, 일반 게임은 몰입은 높지만 학습 구조가 남지 않는 경우가 많습니다. ShadowMind는 카드 선택, 유닛 소환, 전투 결과를 NN 시각화와 연결해 이 문제를 해결합니다. 학습자는 전략 선택의 결과를 바로 확인하며 AI 판단 구조를 이해하고, 교육기관은 수업형 콘텐츠, 교사용 운영도구, 학습 리포트로 확장 가능한 AI 리터러시 프로그램을 운영할 수 있습니다.</p>
-      </section>
-        
+        <h2 class="question">Q2. 아이디어를 떠올린 배경 이야기를 들려주세요.</h2>
+        <p class="answer">AI와 신경망은 이제 누구나 알아야 할 기술이 되었지만, 초급 학습자에게는 여전히 어렵고 추상적입니다. 수식과 코드 중심의 설명은 진입장벽이 높고, 단순 게임형 콘텐츠는 재미는 있어도 왜 그런 결과가 나왔는지를 이해로 연결하기 어렵습니다.
 
-      <section class="qa">
-        <h2 class="question">Q3. 이 아이디어를 어떻게 실현하고 싶으신가요?</h2>
-        <p class="answer">ShadowMind는 카드 전략 게임의 몰입감과 설명 가능한 NN 시각화를 결합한 AI 학습 서비스로 구현하고자 합니다. 초기 버전에서는 사용자가 카드 덱을 구성하고, 유닛을 소환하고, 전투를 진행하는 핵심 플레이 루프를 완성합니다. 이 과정에서 각 카드의 속성, 상성, 배치 선택이 NN의 입력값으로 연결되고, 은닉층 반응과 전투 결과가 시각적으로 표현됩니다. 플레이어는 어떤 선택이 전투 결과를 바꿨는지를 게임 안에서 바로 확인하며 신경망의 입력-반응-출력 구조를 익히게 됩니다.
+ShadowMind는 이 간극에서 출발했습니다. 플레이어가 카드 덱을 구성하고 유닛을 배치하며 전투를 진행하는 동안, 선택한 카드가 어떤 입력이 되고 신경망이 어떻게 반응하며 전투 결과가 왜 달라지는지를 한 화면에서 볼 수 있게 만드는 것이 핵심입니다. 즉 ShadowMind는 AI를 따로 설명하는 게임이 아니라, 플레이하는 순간 NN의 입력, 판단, 출력 구조가 자연스럽게 읽히는 학습형 전략 게임입니다.</p>
 
-사업화는 교육기관용 AI 리터러시 콘텐츠로 확장하는 방향이 적합합니다. 1단계는 플레이 가능한 핵심 게임 프로토타입과 제출용 비주얼, 짧은 소개 영상으로 서비스 이해도를 높이는 것입니다. 2단계는 학교, 학원, 방과후 수업 등에서 활용할 수 있는 미션형 커리큘럼을 설계하고, 강사용 수업 가이드와 학습자 활동지를 붙입니다. 3단계는 학습완주율, 개념 이해도, 카드·전투 선택 분석 등을 보여주는 교사용 대시보드와 학습 리포트를 제공합니다.
-
-수익모델은 일반 게임 과금보다 교육기관 라이선스, 교사용 운영도구 구독, 수업 패키지 공급, 워크북·교구 판매 중심으로 설계합니다. 이렇게 하면 ShadowMind는 단순한 AI 게임 앱이 아니라, 전략적 플레이를 통해 Physical AI와 NN 개념을 체험하게 만드는 교육 서비스로 포지셔닝할 수 있습니다.</p>
-      </section>
-        
-      <section class="qa">
-        <h2 class="question">Q4. 제출 이미지 구성은 어떻게 되나요?</h2>
-        <p class="answer">이미지는 첫 화면에서 ShadowMind의 게임 정체성을 보여주고, 이어 카드가 NN 입력으로 연결되는 장면, 카드 상성과 전투 규칙이 학습 구조가 되는 시스템 보드, 카드 선택에서 학습 피드백까지 이어지는 서비스 흐름, 실제 전장과 카드 전략이 결합된 완성형 게임 보드 순서로 구성합니다.</p>
-        <div class="image-grid">
+        <div class="image-grid section-images">
 
           <figure>
             <img src="assets/image-01.png" alt="첫 화면" loading="lazy" />
             <figcaption><strong>첫 화면</strong><span>카드 전략으로 배우는 AI 신경망 전투의 대표 이미지</span></figcaption>
           </figure>
         
+        </div>
+        
+      </section>
+        
+
+      <section class="qa">
+        <h2 class="question">Q3. 아이디어는 누구의 어떤 문제를 해결해주나요?</h2>
+        <p class="answer">ShadowMind의 1차 대상은 AI와 코딩을 처음 배우는 청소년, 비전공 학습자, 그리고 이를 수업에 도입하려는 교육기관과 강사입니다. 이들은 AI 학습의 필요성은 느끼지만, 신경망이 실제로 어떻게 판단하고 반응하는지 체감할 기회가 부족합니다. 기존 온라인 강의는 개념 전달에는 강하지만 몰입이 낮고, 일반 게임은 몰입은 높지만 학습 구조가 남지 않는 경우가 많습니다.
+
+ShadowMind는 카드 선택, 유닛 소환, 전투 결과를 NN 시각화와 연결해 이 문제를 해결합니다. 사용자는 유닛을 적절히 선택하고 전투를 지휘하며, 승리 시 상대했던 AI의 뉴럴넷 DNA를 획득합니다. 전투 게임을 하면서 자연스럽게 뉴럴넷이 어떻게 동작하는지를 이해하고, 획득한 DNA를 성장시키며 자신만의 카드를 강화합니다.
+
+이 구조는 학습을 강제로 설명하지 않고 플레이 동기 안에 학습을 넣습니다. 더 강한 카드를 만들기 위해 뉴럴넷을 이해하고, 더 좋은 전략을 만들기 위해 입력과 출력의 관계를 관찰하며, 전투 결과를 통해 AI 판단 구조를 다시 확인합니다. 학습자는 전략 선택의 결과를 바로 확인하며 AI 판단 구조를 이해하고, 교육기관은 수업형 콘텐츠, 교사용 운영도구, 학습 리포트로 확장 가능한 AI 리터러시 프로그램을 운영할 수 있습니다.</p>
+
+        <div class="image-grid section-images">
 
           <figure>
             <img src="assets/image-02.png" alt="카드-NN 연결" loading="lazy" />
@@ -152,18 +149,48 @@ figcaption span { display: block; color: var(--muted); font-size: 13px; line-hei
         
 
           <figure>
-            <img src="assets/image-04.png" alt="서비스 흐름" loading="lazy" />
-            <figcaption><strong>서비스 흐름</strong><span>카드 선택, NN 반응, 전투 결과, 학습 피드백의 전체 경험</span></figcaption>
-          </figure>
-        
-
-          <figure>
             <img src="assets/image-05.png" alt="완성형 경험" loading="lazy" />
             <figcaption><strong>완성형 경험</strong><span>카드, 전장, 전략 판단이 결합된 구현 가능 서비스</span></figcaption>
           </figure>
         
         </div>
+        
       </section>
+        
+
+      <section class="qa">
+        <h2 class="question">Q4. 아이디어를 어떻게 실현하고 싶으신가요?</h2>
+        <p class="answer">ShadowMind는 카드 전략 게임의 몰입감과 설명 가능한 NN 시각화를 결합한 AI 학습 서비스로 구현하고자 합니다. 초기 버전에서는 사용자가 카드 덱을 구성하고, 유닛을 소환하고, 전투를 진행하는 핵심 플레이 루프를 완성합니다. 이 과정에서 각 카드의 속성, 상성, 배치 선택이 NN의 입력값으로 연결되고, 은닉층 반응과 전투 결과가 시각적으로 표현됩니다.
+
+사업화는 교육기관용 AI 리터러시 콘텐츠로 확장하는 방향이 적합합니다. 1단계는 플레이 가능한 핵심 게임 프로토타입과 짧은 소개 영상으로 서비스 이해도를 높이는 것입니다. 2단계는 학교, 학원, 방과후 수업 등에서 활용할 수 있는 미션형 커리큘럼을 설계하고, 강사용 수업 가이드와 학습자 활동지를 붙입니다. 3단계는 학습완주율, 개념 이해도, 카드·전투 선택 분석 등을 보여주는 교사용 대시보드와 학습 리포트를 제공합니다.
+
+수익모델은 일반 게임 과금보다 교육기관 라이선스, 교사용 운영도구 구독, 수업 패키지 공급, 워크북·교구 판매 중심으로 설계합니다.</p>
+
+        <div class="image-grid section-images">
+
+          <figure>
+            <img src="assets/image-04.png" alt="서비스 흐름" loading="lazy" />
+            <figcaption><strong>서비스 흐름</strong><span>카드 선택, NN 반응, 전투 결과, 학습 피드백의 전체 경험</span></figcaption>
+          </figure>
+        
+        </div>
+        
+      </section>
+        
+
+      <section class="qa">
+        <h2 class="question">Q5. 사업 분야를 선택해주세요.</h2>
+        <p class="answer">IT/AI, 교육, 게임</p>
+
+      </section>
+        
+
+      <section class="qa">
+        <h2 class="question">Q8. 나의 아이디어를 소개하는 영상을 링크로 제출해주세요.</h2>
+        <p class="answer">https://youtu.be/4iuqHjkSzzY</p>
+
+      </section>
+        
     </main>
   </div>
 </body>
