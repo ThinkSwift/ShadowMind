@@ -1,3 +1,3 @@
 # ShadowMind
 
-GitHub Pages homepage for `shadowmind.swiftian.com`.
+GitHub Pages submission homepage for `shadowmind.swiftian.com`.
